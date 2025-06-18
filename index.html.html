@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HP Perfumes - Products</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      font-size: 2.5rem;
+      border-bottom: 1px solid #444;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .card {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      width: 300px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1.2rem;
+    }
+    .price {
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+    .buy-btn {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .buy-btn:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>HP PERFUMES - Products</header>
+  <div class="products">
+    <div class="card">
+      <img src="perfume1.png" alt="HP Amber Classic">
+      <h3>HP Amber Classic</h3>
+      <div class="price">₹499</div>
+      <button class="buy-btn" onclick="orderProduct('HP Amber Classic', 499)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume2.png" alt="HP Night Shadow">
+      <h3>HP Night Shadow</h3>
+      <div class="price">₹649</div>
+      <button class="buy-btn" onclick="orderProduct('HP Night Shadow', 649)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume3.png" alt="HP Ocean Breeze">
+      <h3>HP Ocean Breeze</h3>
+      <div class="price">₹550</div>
+      <button class="buy-btn" onclick="orderProduct('HP Ocean Breeze', 550)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume4.png" alt="HP Floral Touch">
+      <h3>HP Floral Touch</h3>
+      <div class="price">₹699</div>
+      <button class="buy-btn" onclick="orderProduct('HP Floral Touch', 699)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume5.png" alt="HP Musk Mystery">
+      <h3>HP Musk Mystery</h3>
+      <div class="price">₹720</div>
+      <button class="buy-btn" onclick="orderProduct('HP Musk Mystery', 720)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume6.png" alt="HP Desert Oud">
+      <h3>HP Desert Oud</h3>
+      <div class="price">₹880</div>
+      <button class="buy-btn" onclick="orderProduct('HP Desert Oud', 880)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume7.png" alt="HP Vanilla Dream">
+      <h3>HP Vanilla Dream</h3>
+      <div class="price">₹620</div>
+      <button class="buy-btn" onclick="orderProduct('HP Vanilla Dream', 620)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume8.png" alt="HP Citrus Glow">
+      <h3>HP Citrus Glow</h3>
+      <div class="price">₹580</div>
+      <button class="buy-btn" onclick="orderProduct('HP Citrus Glow', 580)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume9.png" alt="HP Sandal Soul">
+      <h3>HP Sandal Soul</h3>
+      <div class="price">₹770</div>
+      <button class="buy-btn" onclick="orderProduct('HP Sandal Soul', 770)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume10.png" alt="HP Ittar Supreme">
+      <h3>HP Ittar Supreme</h3>
+      <div class="price">₹999</div>
+      <button class="buy-btn" onclick="orderProduct('HP Ittar Supreme', 999)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume11.png" alt="HP Rose Majesty">
+      <h3>HP Rose Majesty</h3>
+      <div class="price">₹720</div>
+      <button class="buy-btn" onclick="orderProduct('HP Rose Majesty', 720)">Buy</button>
+    </div>
+    <div class="card">
+      <img src="perfume12.png" alt="HP Ittar Royale">
+      <h3>HP Ittar Royale</h3>
+      <div class="price">₹1099</div>
+      <button class="buy-btn" onclick="orderProduct('HP Ittar Royale', 1099)">Buy</button>
+    </div>
+  </div>
+
+  <script>
+    function orderProduct(name, price) {
+      const message = `Hello, I want to buy ${name} for ₹${price}.`;
+      const phone = '916352973897';
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+      setTimeout(() => {
+        alert(`Thank you for ordering ${name}!\nWe have received your order for ₹${price}.\nConfirmation sent to your WhatsApp.`);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
